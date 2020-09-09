@@ -30,6 +30,7 @@ def get_japanese_emoticon(file_path, eng_emoji)
   emoticon_hash.find do |key,value|
     if emoticon_hash[key][:english] == eng_emoji
       equivalent = emoticon_hash[key][:japanese]
+      binding.pry
       break if equivalent = emoticon_hash[key][:japanese]
     else equivalent = "Sorry, that emoticon was not found"
   end
