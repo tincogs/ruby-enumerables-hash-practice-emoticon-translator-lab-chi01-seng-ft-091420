@@ -17,7 +17,6 @@ def get_english_meaning(file_path, japan_emoji)
   emoticon_hash.find do |key,value|
     if emoticon_hash[key][:japanese] == japan_emoji
      translation = "#{key}"
-     binding.pry
      break if translation = "#{key}"
   end
   end
@@ -30,7 +29,6 @@ def get_japanese_emoticon(file_path, eng_emoji)
   emoticon_hash.find do |key,value|
     if emoticon_hash[key][:english] == eng_emoji
       equivalent = emoticon_hash[key][:japanese]
-      binding.pry
       break if equivalent = emoticon_hash[key][:japanese]
   end
 end
